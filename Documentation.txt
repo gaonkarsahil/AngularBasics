@@ -12,3 +12,8 @@ Product of Google Team and makes use of TypeScript language from Microsoft.
 2016 = Angular version 2
 2016 = Angular version 4 (version 3 avoided because of misalignment of routers package which was already distributed as 3.0)
 2017 = Angular version 5
+
+Semantic Versioning
+Version 1.2.3 (1=Major (Changed when there is a break in functionality), 2=Minor (Added Features that dont break any functionality), 3=Fix(Patch/Bug fix))
+Angular twice Major Changes in a year.
+Backwards compatibility (Meaning changes will not be huge to affect previous code base syntactically).
