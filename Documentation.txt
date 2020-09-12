@@ -1,0 +1,14 @@
+Angular
+Framework to build client side applications.
+Great for SPAs(Single Page Applications).
+Clear structure(Modular Approach).
+Reusable Code (With the help of components).
+Easier and quicker Development(due to availability of features such as validation,navigation and routing).
+Unit testable code.
+Product of Google Team and makes use of TypeScript language from Microsoft.
+
+
+2010 = First version was Angular JS ( Angular 1.x)
+2016 = Angular version 2
+2016 = Angular version 4 (version 3 avoided because of misalignment of routers package which was already distributed as 3.0)
+2017 = Angular version 5
