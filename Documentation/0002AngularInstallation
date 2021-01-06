@@ -1,0 +1,31 @@
+If already check versions
+node -v
+npm -v
+ng v
+
+
+Installation
+
+#Command to Install Angular CLI
+sudo npm install -g @angular/cli
+
+? Would you like to share anonymous usage data with the Angular Team at Google under
+Google’s Privacy Policy at https://policies.google.com/privacy? For more details and
+how to change this setting, see http://angular.io/analytics. No
+
+#Command to new project in Angular
+ng new SahilHelloWorld-Project
+? Would you like to add Angular routing? Yes
+? Which stylesheet format would you like to use? CSS
+
+#Command to Change the directory
+cd SahilHelloWorld-Project/
+
+#Command to Turn on the server
+ng serve
+
+#open URl 
+http://localhost:4200/
+
+
+
