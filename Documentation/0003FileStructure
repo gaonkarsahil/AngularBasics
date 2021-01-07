@@ -1,0 +1,45 @@
+Modules
+Angular app is an collection of many individual modules.
+Every module has features related to that module e.g User module, Admin module.
+A module is piece of line that can imported or exported.
+Angular app must have one module.Root(Default) module name is AppModule.
+Each module is made up of components and services.
+
+
+Components
+Components controls the portion of the view on browser e.g navbar component,content component.
+Angular app must have one component.Root(Default) component name is AppComponent.
+All other components will nested inside the root component(i.e AppComponent).
+Each component will have HTML template(to represent view in the browser) and class (to control the logic of that particular view).
+
+
+Services
+Services is basically a class that contains business logic of the application.
+
+
+*Angular app has one or more modules.
+*Module has one or more components and services.
+*component = Html template + class to control that view.
+*Services = Business logic.
+*Modules exports and imports code as and when required and renders the view in the browser.
+
+
+
+
+File Structure
+package.json = contains dependencies and dev dependencies ( libraries or modules that are required for your angular application to work.
+main.ts = entry point to angular application.
+app.module.ts = root module of application.
+app.component.ts = root component of application.
+
+
+ng serve working
+Command to to start application.
+when we run this command execution goes to main.ts file.
+In main.ts we boostrap or kickstart AppModule.
+In app.module.ts we bootstrap or kickstart AppComponent.
+In app.component.ts file we have html template(app.component.html) and class inside app.component.ts that contains logic or data for the view.
+In class we have property title = "Appname"
+In html we have {{ title }} which in runtime gets replaced by Appname.
+
+
