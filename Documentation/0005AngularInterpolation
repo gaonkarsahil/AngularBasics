@@ -1,0 +1,27 @@
+Interpolation
+Property or expression within double curly braces is known as Interpolation.
+e.g :- {{ name }}
+       public name= "sahilDynamic";
+Evalutate content inside curly braces and display value when component is rendered in browser.
+Simplest way to bind data from class to template.
+
+Interpolation Can do 
+Angular evalutates the expression and displays the result. {{ 2 + 3 }}  ==> 5
+String concatenation. <h2> {{"welcome "+ name }} </h2> ==> welcome sahilDynamic
+Js properties. {{ name.length }} ==> 12
+Js methods. <h2> {{ name.toUpperCase() }} </h2> ==> SAHILDYNAMIC
+Can call methods define in component class. <h2> {{ greetUser() }} </h2>  ==> hello sahilDynamic
+    
+    greetUser() {
+        return "hello " + this.name;
+    }
+
+Access to global variables such as windows , scrren .Do it in the class and bind it to the template.
+    <h2> {{ siteUrl }} </h2> ==> http://localhost:4200/
+    public siteUrl = window.location.href;
+
+    
+
+Interpolation Cannot do
+Assigning the expression to variable. <h2> {{ a = 2 + 4 }} </h2> ==> error blank screen.(template pare error , cannot contain assignents)
+Access to global variables such as windows , scrren...    <h2> {{window.location.href}} </h2> ==>  TypeError: Cannot read property 'location' of undefined.
