@@ -1,0 +1,59 @@
+
+<input type="text" value="Sahil">
+
+$0 represents current element.
+Select input field and and inspect.
+$0
+<input _ngcontent-ohi-c17 type=​"text" value=​"Sahil">​
+$0.getAttribute('value')
+"Sahil"
+$0.value
+"Sahil"
+
+Now change value in input text on browser to "Gaonkar"
+$0.getAttribute('value')
+"Sahil"
+$0.value
+"Gaonkar"
+
+$0.getAttribute('value') returns same value so attribute didnt changes as old but $0.value is changed so value property changed.
+
+
+Attributes and Properties are not same.
+Attributes are defined by "HTML".
+Properties are defined by "DOM(Document Object Model)".
+Attributes initialize DOM properties ad then they are done.
+Attribute values cannot change once they are initialized.
+Properties value can change.
+
+
+
+Property Binding
+Binding to the dom properties of elements.
+
+using property binding
+<input [id]="myId" type="text" value="Sahil">
+In DOM
+<input _ngcontent-ppx-c17="" type="text" value="Sahil" id="testingId">
+
+using interpolation.
+<input id="{{ myId }}" type="text" value="Sahil">
+In DOM
+<input _ngcontent-sgr-c17="" type="text" value="Sahil" id="testingId">
+
+
+interpolation can work only with string values.
+for boolean values interpolation will not work so we are using property binding.
+
+<input disabled="false" id="{{ myId }}" type="text" value="Sahil">
+setting the disabled value to false has no effect in interpolation.
+
+
+<input [disabled]="false" id="{{ myId }}" type="text" value="Sahil">
+with property binding now input is not disabled.
+
+Property Binding using property value
+<input [disabled]="isDisabled" id="{{ myId }}" type="text" value="SahilPBdisabledTrue">
+
+Can use "bind-" instead of square bracket []
+<input bind-disabled="isDisabled" id="{{ myId }}" type="text" value="SahilPBdisabledTrue">
