@@ -1,0 +1,107 @@
+
+Component
+Component has 3 part- "template, class, metadata".
+template which represent "view"(created using html).
+class which is "code" that supports the view(created using TypeScript).Class contains "data properties and methods" which is used to "control logic" of the view.
+e.g :- we can have method to show or hide an element based on the value of the property.
+"metadata" which is "information" that angular has to "decide if the particular class is angular component or just a class".
+metadata is define using a "decorator" which is a "function" that provides "information" about the class attached to it. For component we have "component decorator".
+
+template => view -> HTML.
+class => code -> TypeScript Data & Methods.
+metadata => information -> Decorator.
+
+
+class having property title
+
+export class AppComponent {
+  title = 'SahilHelloWorld-Project';
+}
+
+Component Decorator :- function that attaches to the class below it. In this case attached to AppComponent.
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+
+Component decorator contains "metadata and template" which represents the view.
+It contains "selector , templateUrl , styleUrls".
+
+selector is "custom html tag" which can be used to represent this component.
+When we specify this selector in html (index.html) Angular "renders component template in its place".
+e.g:- when we specify <app-root> </app-root> in index.html the content of app.component.html will get rendered.
+
+templateUrl "points to the html file" that represents the view of that component.
+styleUrls specifys styles(app.component.css) that applys only to this component.
+
+
+To create new angular component using CLI.
+ng g c NameOftheComponent
+ng = angular
+g = generate
+c = component
+ng g c welcome
+CREATE src/app/welcome/welcome.component.css (0 bytes)
+CREATE src/app/welcome/welcome.component.html (22 bytes)
+CREATE src/app/welcome/welcome.component.spec.ts (633 bytes)
+CREATE src/app/welcome/welcome.component.ts (279 bytes)
+UPDATE src/app/app.module.ts (479 bytes)
+
+Create one folder named welcome.
+Creates 4 files(componet.ts , .html, .css, .spec.ts(Testing file)) and updates app module (Anytime we create new component application should be aware of it done automatically by angular CLI).
+So in app.module.ts file we import the WelcomeComponent and add it to the declarations array.
+declarations array contains all the component used by the application.
+
+import { WelcomeComponent } from './welcome/welcome.component';
+
+declarations: [
+    AppComponent,
+    WelcomeComponent
+]
+
+The selector for welcome component is app-welcome.
+<app-welcome></app-welcome> add this in app.component.html.
+o/p :- we will get app.component.html data with "welcome works!".
+
+
+3 ways to specify selector
+1.As custom html tag
+selector: 'app-welcome'
+<app-welcome></app-welcome>
+2.As a class
+selector: '.app-welcome'
+<div class="app-welcome"></div>
+3.As attribute
+selector: '[app-welcome]'
+<div app-welcome ></div>
+
+
+2 ways to specify template
+1. using separate html file
+templateUrl: './app.component.html'
+src/app/app.component.html
+2.Inline in same typescript file 
+2.a) for single line single quote can be used.
+template: '<div>Inline Template Works</div>',
+2.b) for multiple lines of html use backticks
+template: `<div>
+                Inline Template Works
+            </div>`,
+
+
+2 ways to specify styles
+1. using separate css file
+styleUrls: ['./welcome.component.css']
+src/app/welcome/welcome.component.css
+2.Inline in same typescript file 
+2.a) for single line single quote can be used.
+styles: ['div{color:red;}']
+2.b) for multiple lines of html use backticks
+styles: [`
+          div{
+            color:red;
+          }
+        `]
+
