@@ -1,0 +1,27 @@
+Inline style using style attribute.
+<h2 style = "color:violet"> Not Style Binding 1 </h2>
+
+
+style binding 
+<h2 [style.color] = "'orange'"> Style Binding 1 </h2>
+
+
+conditional style binding
+<h2 [style.color] = " hasError ? 'red' : 'green' "> Style Binding 2</h2>
+
+    public hasError = true;
+
+
+conditional style binding with property
+<h2 [style.color] = "highlightColor"> Style Binding 3</h2>
+
+    public highlightColor = "orange";
+
+
+multiple styles using style binding with property and ngStyle
+<h2 [ngStyle] = "titleStyles"> Style Binding 4</h2>
+
+    public titleStyles = {
+        color: "blue",
+        fontStyle: "italic"
+    }
